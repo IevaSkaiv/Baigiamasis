@@ -5,6 +5,6 @@ import pages.Locators;
 
 public class Search {
     public static String getTextFromFoundEvent() {
-        return Common.getElementText(Locators.HomePage.fieldFoundEvent);
+        return Common.getElementText(Locators.Search.fieldFoundEvent);
     }
 }
