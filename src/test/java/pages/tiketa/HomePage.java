@@ -21,9 +21,5 @@ public class HomePage {
     public static void clickSearchIcon() {
         Common.clickElement(Locators.HomePage.buttonSearchIcon);
     }
-
-    public static String getTextFromFoundEvent() {
-        return Common.getElementText(Locators.HomePage.fieldFoundEvent);
-    }
 }
 

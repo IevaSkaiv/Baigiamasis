@@ -18,9 +18,8 @@ public class HomePage extends BaseTest {
         String expectedText = "labas";
         pages.tiketa.HomePage.enterTextInSearch(expectedText);
         pages.tiketa.HomePage.clickSearchIcon();
-        String actualText = pages.tiketa.HomePage.getTextFromFoundEvent();
+        String actualText = pages.tiketa.Search.getTextFromFoundEvent();
         System.out.println(actualText);
         Assert.assertTrue(actualText.toLowerCase().contains(expectedText.toLowerCase()));
     }
-
 }
