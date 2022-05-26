@@ -21,5 +21,26 @@ public class HomePage {
     public static void clickSearchIcon() {
         Common.clickElement(Locators.HomePage.buttonSearchIcon);
     }
+
+    public static void clickLogInHomePage() {
+        Common.clickElement(Locators.HomePage.buttonLogInInHomePage);
+    }
+
+    public static void enterEmails(String text) {
+        Common.sendKeysToElement(Locators.HomePage.inputEmail, text);
+    }
+
+    public static void enterPassword(String text) {
+        Common.sendKeysToElement(Locators.HomePage.inputPassword, text);
+    }
+
+    public static void clickToLogIn() {
+        Common.clickElement(Locators.HomePage.buttonLogIn);
+    }
+
+    public static boolean checkIfUserIconAppears() {
+        Common.waitForElementToBeVisible(Locators.HomePage.buttonUser);
+        return true;
+    }
 }
 

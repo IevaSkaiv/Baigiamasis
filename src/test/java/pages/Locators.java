@@ -10,5 +10,10 @@ public class Locators {
         public static By inputSearch = By.xpath("//*[@id ='mainsearch']");
         public static By buttonSearchIcon = By.xpath("(//*[@type ='submit'])[1]");
         public static By fieldFoundEvent = By.xpath("//*[@id='eventsContainter']/div[3]/div/div/div/a/div[2]/div[1]/p");
+        public static By buttonLogInInHomePage = By.xpath("//*[@id ='OnlyLogin']");
+        public static By inputEmail = By.xpath("//*[@id ='txtLoginName']");
+        public static By inputPassword = By.xpath("//*[@id ='txtLoginPsw']");
+        public static By buttonLogIn = By.xpath("//*[@id ='btnLogin']");
+        public static By buttonUser = By.xpath("//*[@class ='iconsN iconsN-user-h']");
     }
 }
