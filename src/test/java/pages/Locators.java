@@ -13,10 +13,17 @@ public class Locators {
         public static By inputEmail = By.xpath("//*[@id ='txtLoginName']");
         public static By inputPassword = By.xpath("//*[@id ='txtLoginPsw']");
         public static By buttonLogIn = By.xpath("//*[@id ='btnLogin']");
-        public static By buttonUser = By.xpath("//*[@class ='iconsN iconsN-user-h']");
+        public static By buttonUser = By.xpath("//*[@class='first-name']");
     }
 
     public static class Search{
         public static By fieldFoundEvent = By.xpath("//*[@id='eventsContainter']/div[3]/div/div/div/a/div[2]/div[1]/p");
+    }
+
+    public static class User{
+        public static By buttonUserInfo = By.xpath("//*[@href ='/LT/User/Info']");
+        public static By buttonChangePassword = By.xpath("(//*[@class='slidedown-arrow arrow-indicator'])[4]");
+        public static By inputNewPassword = By.xpath("//*[@id ='txtNewPassword']");
+        public static By inputRepeatNewPassword = By.xpath("//*[@id ='txtRepeatPassword']");
     }
 }

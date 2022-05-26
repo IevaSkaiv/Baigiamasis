@@ -38,9 +38,16 @@ public class HomePage {
         Common.clickElement(Locators.HomePage.buttonLogIn);
     }
 
-    public static boolean checkIfUserIconAppears() {
+    public static boolean doesUserIconAppears() {
         Common.waitForElementToBeVisible(Locators.HomePage.buttonUser);
         return true;
+    }
+    public static void waitForUserIconAppears() {
+        Common.waitForElementToBeVisible(Locators.HomePage.buttonUser);
+    }
+
+    public static void clickOnUser() {
+        Common.clickElement(Locators.HomePage.buttonUser);
     }
 }
 
