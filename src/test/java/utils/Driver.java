@@ -19,6 +19,10 @@ public class Driver {
         return driver.get();
     }
 
+    public static void refreshDriver(){
+        driver.get().navigate().refresh();
+    }
+
     public static void closeDriver() {
         driver.get().quit();
         driver.remove();

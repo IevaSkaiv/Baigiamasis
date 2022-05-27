@@ -27,7 +27,7 @@ public class HomePage extends BaseTest {
     //Logging in with already existing account, to see if it was successful check if user icon (on top left corner appears)
     public void loggingInToSite() {
         String email = "skaivydaite@gmail.com";
-        String password = "asyde147";
+        String password = "testas111";
         pages.tiketa.HomePage.clickLogInHomePage();
         pages.tiketa.HomePage.enterEmails(email);
         pages.tiketa.HomePage.enterPassword(password);

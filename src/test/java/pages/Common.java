@@ -29,8 +29,21 @@ public class Common {
         return getElement(locator).getText();
     }
 
-    public static void waitForElementToBeVisible(By locator) {
+    public static void waitForElementToBeClickable(By locator) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waitForElementToBeVisible(By locator) {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static void refreshPage(){
+        Driver.refreshDriver();
+    }
+
+    public static void clearText(By locator){
+        Driver.getDriver().findElement(locator).clear();
     }
 }

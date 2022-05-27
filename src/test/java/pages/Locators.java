@@ -17,13 +17,23 @@ public class Locators {
     }
 
     public static class Search{
+        //couldn't get shorter xpath, cause with shorter xpath (checking in site it works) in test it takes wrong elements
         public static By fieldFoundEvent = By.xpath("//*[@id='eventsContainter']/div[3]/div/div/div/a/div[2]/div[1]/p");
     }
 
     public static class User{
         public static By buttonUserInfo = By.xpath("//*[@href ='/LT/User/Info']");
         public static By buttonChangePassword = By.xpath("(//*[@class='slidedown-arrow arrow-indicator'])[4]");
+        public static By buttonPersonalUserInfo = By.xpath("(//*[@class='slidedown-arrow arrow-indicator'])[1]");
+        public static By fieldInfoChangedMessage = By.xpath("//*[@class='user-data-ok']");
+        public static By inputFirstName = By.xpath("//*[@id='txtFirstname']");
+        public static By inputLastName = By.xpath("//*[@id='txtLastname']");
+        public static By buttonSaveData = By.xpath("//*[@id='saveData']");
+        public static By fieldFirstName = By.xpath("//*[@class='first-name']");
+        public static By fieldLastName = By.xpath("//*[@class='second-name text-uppercase']");
         public static By inputNewPassword = By.xpath("//*[@id ='txtNewPassword']");
         public static By inputRepeatNewPassword = By.xpath("//*[@id ='txtRepeatPassword']");
+        public static By buttonSubmitNewPassword = By.xpath("(//*[@type='submit' and text()='Išsaugoti'])[4]");
+        public static By fieldChangedPasswordMessage = By.xpath("//*[@class = 'user-pass-ok']");
     }
 }

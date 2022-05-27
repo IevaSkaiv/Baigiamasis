@@ -9,7 +9,7 @@ public class HomePage {
     }
 
     public static void closeAd() {
-        Common.waitForElementToBeVisible(Locators.HomePage.frameAd);
+        Common.waitForElementToBeClickable(Locators.HomePage.frameAd);
         Common.clickElement(Locators.HomePage.buttonCloseAd);
         Common.clickElement(Locators.HomePage.buttonAcceptCookies);
     }
@@ -39,11 +39,11 @@ public class HomePage {
     }
 
     public static boolean doesUserIconAppears() {
-        Common.waitForElementToBeVisible(Locators.HomePage.buttonUser);
+        Common.waitForElementToBeClickable(Locators.HomePage.buttonUser);
         return true;
     }
     public static void waitForUserIconAppears() {
-        Common.waitForElementToBeVisible(Locators.HomePage.buttonUser);
+        Common.waitForElementToBeClickable(Locators.HomePage.buttonUser);
     }
 
     public static void clickOnUser() {
