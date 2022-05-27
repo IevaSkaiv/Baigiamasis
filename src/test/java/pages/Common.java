@@ -57,4 +57,12 @@ public class Common {
         action.click();
         action.perform();
     }
+
+    public static void switchToFrame(){
+        Driver.getDriver().switchTo().frame("frame");
+    }
+
+    public static void switchToParentFrame(){
+        Driver.getDriver().switchTo().parentFrame();
+    }
 }

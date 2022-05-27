@@ -20,11 +20,27 @@ public class GiftCard {
         Common.click(Locators.GiftCard.button10Eur);
     }
 
-    public static void waitForPriceChoiceToAppear() {
-        Common.waitForElementToBeVisible(Locators.GiftCard.button10Eur);
+    public static void switchToFrame() {
+        Common.switchToFrame();
     }
 
-    public static String getMessageForTicketChoice() {
-        return Common.getElementText(Locators.GiftCard.fieldMessageForGiftCardPrice);
+    public static void switchToParentFrame(){
+        Common.switchToParentFrame();
+    }
+
+    public static void clickFindTicket() {
+        Common.clickElement(Locators.GiftCard.buttonFindTicket);
+    }
+
+    public static void waitForFindTicketToAppear() {
+        Common.waitForElementToBeVisible(Locators.GiftCard.buttonFindTicket);
+    }
+
+    public static String checkIfCartAppears() {
+        return Common.getElementText(Locators.GiftCard.fieldNumberOfItemsInCard);
+    }
+
+    public static void waitForTicketToAdd() {
+        Common.waitForElementToBeClickable(Locators.GiftCard.fieldTicket);
     }
 }

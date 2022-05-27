@@ -22,18 +22,19 @@ public class GiftCard extends BaseTest {
         pages.tiketa.HomePage.clickGiftCards();
      }
 
-     @Test//trying to put 10eur gift card to cart (can't do it causes of iframes, so we check if we are able to go to gift card price choices)
+     @Test//trying to put 10eur gift card to cart
      public void putGiftCardInCart(){
-        String expectedMessage = "Bilietų pasirinkimas";
+        String expectedText = "1";
         pages.tiketa.GiftCard.clickOnGiftCard();
         pages.tiketa.GiftCard.clickBuyGiftCard();
-        String actualMessage = pages.tiketa.GiftCard.getMessageForTicketChoice();
-        Assert.assertEquals(actualMessage, expectedMessage);
-//        pages.tiketa.GiftCard.waitForPriceChoiceToAppear();
-//        pages.tiketa.GiftCard.clickBuyFor10Eur();
-//        pages.tiketa.GiftCard.clickFindTicket();
-//        boolean doesCartAppears = pages.tiketa.GiftCard.checkIfCartAppears();
-//        Assert.assertTrue(doesCartAppears);
+        pages.tiketa.GiftCard.switchToFrame();
+        pages.tiketa.GiftCard.clickBuyFor10Eur();
+        pages.tiketa.GiftCard.switchToParentFrame();
+        pages.tiketa.GiftCard.waitForFindTicketToAppear();
+        pages.tiketa.GiftCard.clickFindTicket();
+        pages.tiketa.GiftCard.waitForTicketToAdd();
+        String text = pages.tiketa.GiftCard.checkIfCartAppears();
+        Assert.assertEquals(text, expectedText);
      }
 
 }
