@@ -3,6 +3,7 @@ package tests.tiketa;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.Constants;
 import tests.BaseTest;
 
 public class HomePage extends BaseTest {
@@ -26,8 +27,8 @@ public class HomePage extends BaseTest {
     @Test
     //Logging in with already existing account, to see if it was successful check if user icon (on top left corner appears)
     public void loggingInToSite() {
-        String email = "skaivydaite@gmail.com";
-        String password = "testas111";
+        String email = Constants.EMAIL;
+        String password = Constants.PASSWORD;
         pages.tiketa.HomePage.clickLogInHomePage();
         pages.tiketa.HomePage.enterEmails(email);
         pages.tiketa.HomePage.enterPassword(password);

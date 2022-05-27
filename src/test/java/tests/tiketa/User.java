@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import pages.Constants;
 import tests.BaseTest;
 
 public class User extends BaseTest {
@@ -13,8 +14,8 @@ public class User extends BaseTest {
         pages.tiketa.HomePage.open();
         pages.tiketa.HomePage.closeAd();
 
-        String email = "skaivydaite@gmail.com";
-        String password = "testas111";
+        String email = Constants.EMAIL;
+        String password = Constants.PASSWORD;
         pages.tiketa.HomePage.clickLogInHomePage();
         pages.tiketa.HomePage.enterEmails(email);
         pages.tiketa.HomePage.enterPassword(password);
@@ -26,7 +27,7 @@ public class User extends BaseTest {
     @Test //Changing password
     public void changePassword(){
         String expectedMessage = "Vartotojo slaptažodis pakeistas.";
-        String newPassword = "testas111";
+        String newPassword = Constants.PASSWORD;
         pages.tiketa.User.clickUserInfo();
         pages.tiketa.User.changePassword();
         pages.tiketa.User.waitForPasswordInputToAppear();
@@ -42,8 +43,8 @@ public class User extends BaseTest {
          //we check if a change was made (we need to refresh a page to see that change) by checking first name and last name shown in the top left corner
     public void changeUserInfo(){
         pages.tiketa.User.clickUserInfo();
-        String expectedFirstName = "Ieva";
-        String expectedLastName = "Skaivydaite";
+        String expectedFirstName = "firstName";
+        String expectedLastName = "lastName";
         pages.tiketa.User.clickPersonalUserInfo();
         pages.tiketa.User.waitForNameInputToAppear();
         pages.tiketa.User.enterFirstName(expectedFirstName);

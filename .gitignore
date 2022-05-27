@@ -3,3 +3,4 @@
 .idea/
 target/
 screenshots/
+src/test/java/pages/Constants.java

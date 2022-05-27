@@ -3,6 +3,7 @@ package tests.tiketa;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.Constants;
 import tests.BaseTest;
 
 public class GiftCard extends BaseTest {
@@ -11,8 +12,8 @@ public class GiftCard extends BaseTest {
         pages.tiketa.HomePage.open();
         pages.tiketa.HomePage.closeAd();
 
-        String email = "skaivydaite@gmail.com";
-        String password = "testas111";
+        String email = Constants.EMAIL;
+        String password = Constants.PASSWORD;
         pages.tiketa.HomePage.clickLogInHomePage();
         pages.tiketa.HomePage.enterEmails(email);
         pages.tiketa.HomePage.enterPassword(password);
