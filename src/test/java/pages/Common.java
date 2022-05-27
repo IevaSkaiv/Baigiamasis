@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Driver;
@@ -45,5 +46,15 @@ public class Common {
 
     public static void clearText(By locator){
         Driver.getDriver().findElement(locator).clear();
+    }
+
+    public static void click(By locator){
+        WebElement element = Driver.getDriver().findElement(locator);
+
+        Actions action = new Actions(Driver.getDriver());
+
+        action.moveToElement(element);
+        action.click();
+        action.perform();
     }
 }

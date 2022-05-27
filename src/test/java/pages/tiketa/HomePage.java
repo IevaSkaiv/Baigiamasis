@@ -49,5 +49,9 @@ public class HomePage {
     public static void clickOnUser() {
         Common.clickElement(Locators.HomePage.buttonUser);
     }
+
+    public static void clickGiftCards() {
+        Common.clickElement(Locators.GiftCard.buttonGiftCard);
+    }
 }
 

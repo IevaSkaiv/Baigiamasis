@@ -36,4 +36,13 @@ public class Locators {
         public static By buttonSubmitNewPassword = By.xpath("(//*[@type='submit' and text()='Išsaugoti'])[4]");
         public static By fieldChangedPasswordMessage = By.xpath("//*[@class = 'user-pass-ok']");
     }
+
+    public static class GiftCard{
+        public static By buttonGiftCard = By.xpath("//*[@class='active']");
+        public static By buttonGetGiftCard = By.xpath("//*[@class='btn btn-red a-red btn-default btn-lg btn-red text-uppercase pull-right']");
+        public static By buttonBuyGiftCard = By.xpath("//*[@class='btn btn-red btn-default btn-sm text-uppercase']");
+        public static By button10Eur = By.xpath("//*[@id='758138']");
+
+        public static By fieldMessageForGiftCardPrice = By.xpath("//*[@id = 'accTickets']");
+    }
 }
