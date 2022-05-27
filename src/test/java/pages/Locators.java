@@ -43,7 +43,7 @@ public class Locators {
         public static By buttonBuyGiftCard = By.xpath("//*[@class='btn btn-red btn-default btn-sm text-uppercase']");
         public static By button10Eur = By.xpath("//*[@id='758138']");
         public static By buttonFindTicket = By.xpath("//*[@id='btnFindTickets-iframe']");
-        public static By fieldTicket = By.xpath("//*[@id='sideCartTickerDiv']");
+        public static By fieldTicket = By.xpath("//*[@class='title cart-sector']");
         public static By fieldNumberOfItemsInCard = By.xpath("//*[@id = 'sdTotTix']");
     }
 }

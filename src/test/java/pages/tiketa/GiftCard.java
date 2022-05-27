@@ -41,6 +41,22 @@ public class GiftCard {
     }
 
     public static void waitForTicketToAdd() {
-        Common.waitForElementToBeClickable(Locators.GiftCard.fieldTicket);
+        Common.waitForElementToBeVisible(Locators.GiftCard.fieldTicket);
+    }
+
+    public static void waitForPriceChoiceToBeVisible() {
+        Common.waitForElementToBeVisible(Locators.GiftCard.button10Eur);
+    }
+
+    public static String getButtonText() {
+        return Common.getElementText(Locators.GiftCard.buttonFindTicket);
+    }
+
+    public static void waitForElementToDisapear(){
+        Common.waitForElementToNotBeVisible(Locators.GiftCard.buttonFindTicket);
+    }
+
+    public static void waitForTextToChange(){
+
     }
 }

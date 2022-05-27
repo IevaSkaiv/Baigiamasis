@@ -28,6 +28,7 @@ public class GiftCard extends BaseTest {
         pages.tiketa.GiftCard.clickOnGiftCard();
         pages.tiketa.GiftCard.clickBuyGiftCard();
         pages.tiketa.GiftCard.switchToFrame();
+        pages.tiketa.GiftCard.waitForPriceChoiceToBeVisible();
         pages.tiketa.GiftCard.clickBuyFor10Eur();
         pages.tiketa.GiftCard.switchToParentFrame();
         pages.tiketa.GiftCard.waitForFindTicketToAppear();
