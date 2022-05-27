@@ -47,6 +47,7 @@ public class HomePage {
     }
 
     public static void clickOnUser() {
+        waitForUserIconAppears();
         Common.clickElement(Locators.HomePage.buttonUser);
     }
 

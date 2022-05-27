@@ -20,7 +20,6 @@ public class User extends BaseTest {
         pages.tiketa.HomePage.enterEmails(email);
         pages.tiketa.HomePage.enterPassword(password);
         pages.tiketa.HomePage.clickToLogIn();
-        pages.tiketa.HomePage.waitForUserIconAppears();
         pages.tiketa.HomePage.clickOnUser();
     }
 
@@ -30,11 +29,9 @@ public class User extends BaseTest {
         String newPassword = Constants.PASSWORD;
         pages.tiketa.User.clickUserInfo();
         pages.tiketa.User.changePassword();
-        pages.tiketa.User.waitForPasswordInputToAppear();
         pages.tiketa.User.enterNewPassword(newPassword);
         pages.tiketa.User.enterRepeatNewPassword(newPassword);
         pages.tiketa.User.clickChangePassword();
-        pages.tiketa.User.waitForInfoMessage();
         String message = pages.tiketa.User.getChangedPasswordMessage();
         Assert.assertEquals(message,expectedMessage);
     }
@@ -46,11 +43,9 @@ public class User extends BaseTest {
         String expectedFirstName = "firstName";
         String expectedLastName = "lastName";
         pages.tiketa.User.clickPersonalUserInfo();
-        pages.tiketa.User.waitForNameInputToAppear();
         pages.tiketa.User.enterFirstName(expectedFirstName);
         pages.tiketa.User.enterLastName(expectedLastName);
         pages.tiketa.User.clickSubmitInfo();
-        pages.tiketa.User.waitForChangedInfoMessage();
         pages.tiketa.User.refresh();
         String actualFirstName = pages.tiketa.User.getFirstNameText();
         String actualLastName = pages.tiketa.User.getLastNameText();

@@ -16,6 +16,7 @@ public class User {
     }
 
     public static void enterNewPassword(String text) {
+        waitForPasswordInputToAppear();
         Common.sendKeysToElement(Locators.User.inputNewPassword, text);
     }
 
@@ -32,6 +33,7 @@ public class User {
     }
 
     public static String getChangedPasswordMessage() {
+        waitForInfoMessage();
         return Common.getElementText(Locators.User.fieldChangedPasswordMessage);
     }
 
@@ -45,6 +47,7 @@ public class User {
 
     //this method before inputting text clears the field form previously entered text
     public static void enterFirstName(String text) {
+        waitForNameInputToAppear();
         Common.clearText(Locators.User.inputFirstName);
         Common.sendKeysToElement(Locators.User.inputFirstName, text);
     }
@@ -59,6 +62,7 @@ public class User {
     }
 
     public static void refresh() {
+        waitForChangedInfoMessage();
         Common.refreshPage();
     }
 

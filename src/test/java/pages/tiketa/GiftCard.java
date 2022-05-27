@@ -17,6 +17,7 @@ public class GiftCard {
     }
 
     public static void clickBuyFor10Eur() {
+        waitForPriceChoiceToBeVisible();
         Common.click(Locators.GiftCard.button10Eur);
     }
 
@@ -29,6 +30,7 @@ public class GiftCard {
     }
 
     public static void clickFindTicket() {
+        waitForFindTicketToAppear();
         Common.clickElement(Locators.GiftCard.buttonFindTicket);
     }
 
@@ -37,6 +39,7 @@ public class GiftCard {
     }
 
     public static String checkIfCartAppears() {
+        waitForTicketToAdd();
         return Common.getElementText(Locators.GiftCard.fieldNumberOfItemsInCard);
     }
 
