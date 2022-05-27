@@ -10,7 +10,7 @@ Pasirinkta testuoti svetainė: https://www.tiketa.lt/LT
 2. Try logging in using valid email and valid password:
     * click button *"Prisijunk"*;
     * enter valid email address;
-    * enter wrong (invalid) password;
+    * enter valid password;
     * check to see if an user icon appears. 
    
    (Email and Password are in Constants file so before testing you need to fill it up)
@@ -32,7 +32,7 @@ Pasirinkta testuoti svetainė: https://www.tiketa.lt/LT
    * enter new first name;
    * enter new last name;
    * click to save data;
-   * refresh page and check if new account info is shown correctly on the top left corner.
+   * refresh page and check if new account info is shown correctly in the top left corner.
 
 5. Try adding 1 gift card to cart:
    * (before doing these steps you need to log in);

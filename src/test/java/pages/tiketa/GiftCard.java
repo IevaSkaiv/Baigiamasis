@@ -17,8 +17,10 @@ public class GiftCard {
     }
 
     public static void clickBuyFor10Eur() {
+        switchToFrame();
         waitForPriceChoiceToBeVisible();
         Common.click(Locators.GiftCard.button10Eur);
+        switchToParentFrame();
     }
 
     public static void switchToFrame() {

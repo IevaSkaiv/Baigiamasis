@@ -14,12 +14,7 @@ public class User extends BaseTest {
         pages.tiketa.HomePage.open();
         pages.tiketa.HomePage.closeAd();
 
-        String email = Constants.EMAIL;
-        String password = Constants.PASSWORD;
-        pages.tiketa.HomePage.clickLogInHomePage();
-        pages.tiketa.HomePage.enterEmails(email);
-        pages.tiketa.HomePage.enterPassword(password);
-        pages.tiketa.HomePage.clickToLogIn();
+        pages.tiketa.HomePage.loggingToSite();
         pages.tiketa.HomePage.clickOnUser();
     }
 

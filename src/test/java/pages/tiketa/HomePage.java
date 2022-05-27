@@ -1,6 +1,7 @@
 package pages.tiketa;
 
 import pages.Common;
+import pages.Constants;
 import pages.Locators;
 
 public class HomePage {
@@ -12,6 +13,15 @@ public class HomePage {
         Common.waitForElementToBeClickable(Locators.HomePage.frameAd);
         Common.clickElement(Locators.HomePage.buttonCloseAd);
         Common.clickElement(Locators.HomePage.buttonAcceptCookies);
+    }
+
+    public static void loggingToSite(){
+        String email = Constants.EMAIL;
+        String password = Constants.PASSWORD;
+        clickLogInHomePage();
+        enterEmails(email);
+        enterPassword(password);
+        clickToLogIn();
     }
 
     public static void enterTextInSearch(String text) {
